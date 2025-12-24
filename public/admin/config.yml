@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: chadlivesshere/thealchemistpapers
+  repo: chadliveshere/thealchemistpapers
   branch: main
 
 publish_mode: editorial_workflow
