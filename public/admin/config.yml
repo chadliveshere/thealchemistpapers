@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: chadlivesshere/thealchemistpapers
   branch: main
 
 publish_mode: editorial_workflow
