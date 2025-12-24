@@ -1,0 +1,39 @@
+backend:
+  name: git-gateway
+  branch: main
+
+publish_mode: editorial_workflow
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "spells"
+    label: "Spells"
+    folder: "src/content/spells"
+    create: true
+    extension: "md"
+    format: "frontmatter"
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Published", name: "published", widget: "boolean", default: true }
+      - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
+      - { label: "Intention", name: "intention", widget: "string" }
+      - { label: "Season", name: "season", widget: "select", options: ["Spring","Summer","Autumn","Winter","Any"] }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "correspondences"
+    label: "Correspondences"
+    folder: "src/content/correspondences"
+    create: true
+    extension: "md"
+    format: "frontmatter"
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Published", name: "published", widget: "boolean", default: true }
+      - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
+      - { label: "Type", name: "type", widget: "select", options: ["Herb","Stone","Planet","Moon","Color","Other"] }
+      - { label: "Elements", name: "elements", widget: "list", default: [] }
+      - { label: "Body", name: "body", widget: "markdown" }
